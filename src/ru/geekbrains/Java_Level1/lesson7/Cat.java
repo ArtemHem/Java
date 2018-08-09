@@ -42,7 +42,7 @@ public class Cat {
         Cat cat = (Cat) o;
         if(notHungry != cat.notHungry) return false;
         if(foodServing!=cat.foodServing) return false;
-        if (!(name.equals(cat.name)) || name == null || cat.name == null) return false;
+        if ((name == null) ? cat.name != null : name.equals(cat.name)) return false;
         return true;
     }
 
